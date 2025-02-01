@@ -1,0 +1,22 @@
+import '../models/lesson_model.dart';
+
+final List<Lesson> lessons = [
+  Lesson(
+    id: '1',
+    title: 'Greetings',
+    phrases: [
+      {'phrase': 'नमस्ते', 'translation': 'Hello', 'audio': 'namaste.mp3'},
+      {'phrase': 'धन्यवाद', 'translation': 'Thank you', 'audio': 'dhanyabad.mp3'},
+      {'phrase': 'तपाईंलाई कस्तो छ?', 'translation': 'How are you?', 'audio': 'kasto_chha.mp3'},
+    ],
+  ),
+  Lesson(
+    id: '2',
+    title: 'Directions',
+    phrases: [
+      {'phrase': 'बाटो कहाँ छ?', 'translation': 'Where is the road?', 'audio': 'bato_kaha_chha.mp3'},
+      {'phrase': 'बायाँ', 'translation': 'Left', 'audio': 'baya.mp3'},
+      {'phrase': 'दायाँ', 'translation': 'Right', 'audio': 'daya.mp3'},
+    ],
+  ),
+];
