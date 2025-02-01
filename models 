@@ -1,0 +1,11 @@
+class Lesson {
+  final String id;
+  final String title;
+  final List<Map<String, String>> phrases;
+
+  Lesson({
+    required this.id,
+    required this.title,
+    required this.phrases,
+  });
+}
