@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import '../data/lessons_data.dart';
+import 'lesson_screen.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Learn Nepali'),
+      ),
+      body: ListView.builder(
+        itemCount: lessons.length,
+        itemBuilder: (context, index) {
+          final lesson = lessons[index];
+          return ListTile(
+            title: Text(lesson.title),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LessonScreen(lesson: lesson),
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
