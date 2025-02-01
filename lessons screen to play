@@ -1,0 +1,7 @@
+import 'package:audioplayers/audioplayers.dart';
+
+// Inside the IconButton's onPressed:
+onPressed: () async {
+  final player = AudioPlayer();
+  await player.play(AssetSource(phrase['audio']!));
+},
