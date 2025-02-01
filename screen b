@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import '../models/lesson_model.dart';
+
+class LessonScreen extends StatelessWidget {
+  final Lesson lesson;
+
+  LessonScreen({required this.lesson});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(lesson.title),
+      ),
+      body: ListView.builder(
+        itemCount: lesson.phrases.length,
+        itemBuilder: (context, index) {
+          final phrase = lesson.phrases[index];
+          return Card(
+            child: ListTile(
+              title: Text(phrase['phrase']!),
+              subtitle: Text(phrase['translation']!),
+              trailing: IconButton(
+                icon: Icon(Icons.volume_up),
+                onPressed: () {
+                  // TODO: Add audio playback functionality
+                },
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
